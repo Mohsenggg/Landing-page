@@ -39,14 +39,6 @@
 */
 
 // build the nav
-
-const mainHeading = document.querySelector('.edit');
-mainHeading.textContent = 'heyyyy​';
-
-const navlist = document.getElementById("navbar__list");
-navlist.creatElement('li');
-
-
 // select the first (main) heading of the page
 // add the <span> element as the last child element of the main heading
 
