@@ -40,7 +40,6 @@
 
 // build the nav
 
-
 const mainHeading = document.querySelector('.edit');
 mainHeading.textContent = 'heyyyy​';
 
@@ -48,8 +47,9 @@ const navlist = document.getElementById("navbar__list");
 navlist.creatElement('li');
 
 
-select the first (main) heading of the page
-add the <span> element as the last child element of the main heading
+// select the first (main) heading of the page
+// add the <span> element as the last child element of the main heading
+
 const newLi = document.createElement('li');
 const navList = document.getElementById("navbar__list");
 const addLi = navList.appendChild(newLi);
@@ -67,7 +67,26 @@ const anchorLine = document.querySelector(".menu__link");
 anchorLine.insertAdjacentHTML('afterbegin', "section x");
 anchorLine.setAttribute('href', '#section3');
 
+let sections = new Array ("Section 1", "Section 2", "Section 3", "Section 4");
 
+let secText = sections.forEach(function(item){
+    let li = document.createElement("li");
+    let a = document.createElement("a");
+    let text = document.createTextNode(item);
+    li.appendChild(a);
+    a.classList.add("menu__link")
+    a.setAttribute('href', secSelect(sections.length));
+    a.appendChild(text);
+    navList.appendChild(li);
+});
+
+let theList ="";
+function secSelect(y){
+    for(let x = 1; x <= y; x++){        
+    }
+    return  theList;
+};
+console.log(secSelect(sections.length));
 
 // The code above is the ice tip based on unseen tons of tries down :)
 
