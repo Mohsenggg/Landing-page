@@ -89,6 +89,7 @@ function secSelect(y){
 console.log(secSelect(sections.length));
 
 
+
 // Add class 'active' to section when near top of viewport
 
 
