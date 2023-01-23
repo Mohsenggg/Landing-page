@@ -42,6 +42,7 @@
 // select the first (main) heading of the page
 // add the <span> element as the last child element of the main heading
 
+
 const newLi = document.createElement('li');
 const navList = document.getElementById("navbar__list");
 const addLi = navList.appendChild(newLi);
@@ -60,6 +61,7 @@ anchorLine.insertAdjacentHTML('afterbegin', "section x");
 anchorLine.setAttribute('href', '#section3');
 
 let sections = new Array ("Section 1", "Section 2", "Section 3", "Section 4");
+let num = 1;
 
 let secText = sections.forEach(function(item){
     let li = document.createElement("li");
@@ -67,20 +69,10 @@ let secText = sections.forEach(function(item){
     let text = document.createTextNode(item);
     li.appendChild(a);
     a.classList.add("menu__link")
-    a.setAttribute('href', secSelect(sections.length));
+    a.setAttribute('href', "#section" + num++);
     a.appendChild(text);
     navList.appendChild(li);
 });
-
-let theList ="";
-function secSelect(y){
-    for(let x = 1; x <= y; x++){        
-    }
-    return  theList;
-};
-console.log(secSelect(sections.length));
-
-
 
 // Add class 'active' to section when near top of viewport
 
