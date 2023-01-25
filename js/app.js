@@ -43,19 +43,30 @@
 // add the <span> element as the last child element of the main heading
 
 
+// first step >> get the location nav list by id.
 const navList = document.getElementById("navbar__list");
-let sections = new Array ("Section 1", "Section 2", "Section 3", "Section 4");
+// build an array that contains the title of each section.   
+const sections = new Array ("Section 1", "Section 2", "Section 3", "Section 4");
+// set a variable that will be incremented to give section numbers.
 let num = 1;
-
-let secText = sections.forEach(function(item){
-    let li = document.createElement("li");
-    let a = document.createElement("a");
+// Main function that loop over each item in sections array.
+sections.forEach(function(item){
+    // set variable that assign section's title items as an element text.
     let text = document.createTextNode(item);
-    li.appendChild(a);
-    a.classList.add("menu__link")
-    a.setAttribute('href', "#section" + num++);
-    a.appendChild(text);
-    navList.appendChild(li);
+    // create list element for each sections.  
+    let navLi = document.createElement("li");
+    // creat anchor for each list Element.
+    let liAnchor = document.createElement("a");
+    // add style to the anchor by linking it with css class.
+    liAnchor.classList.add("menu__link")
+    // link the anchor with each section id by herf attribute.
+    liAnchor.setAttribute('href', "#section" + num++);
+    // add titles text to anchor element.  
+    liAnchor.appendChild(text);
+    // insert the anchor element into list element.
+    navLi.appendChild(liAnchor);
+    // add li elements to html body as a child of nav element.
+    navList.appendChild(navLi);
 });
 
 
