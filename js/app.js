@@ -72,6 +72,44 @@ sections.forEach(function(item){
 
 // Add class 'active' to section when near top of viewport
 
+const cards = document.querySelectorAll(".activeHere")
+// let target = document.querySelector(".main__hero");
+
+const observer = new IntersectionObserver(
+    entries => {
+    entries.forEach(entry => {
+    
+            entry.target.classList.add("Active", entry.isIntersecting)
+        })
+    },
+        {
+            threshold: 1,
+        }
+    )  
+cards.forEach(activeHere => {
+   observer.observe(activeHere);
+})
+
+
+const Hi = document.querySelectorAll(".activeHere")
+// let target = document.querySelector(".main__hero");
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(section => {
+        if(entries[0]['isIntersecting'] === true) {
+            if(entries[0]['intersectionRatio'] > 0.5)
+            document.querySelector(".activeHere").classList.add("Active")
+        }
+            else document.querySelector(".activeHere").classList.remove("Active")
+
+    }, { threshold: [0.5]});  
+
+Hi.forEach(activeHere => {
+   observer.observe(activeHere);
+})
+
+
 
 // Scroll to anchor ID using scrollTO event
 
