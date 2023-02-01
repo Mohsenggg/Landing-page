@@ -24,11 +24,11 @@ This project aims to give you real-world scenarios of manipulating the DOM. The 
 
 ## Project Files
 
- index.html
- styles.css
- app.js
- README.md
- LICENSE.text
+ #### index.html
+ #### styles.css
+ #### app.js
+ #### README.md
+ #### LICENSE.text
 
 ## Project Content
 
@@ -36,9 +36,9 @@ Landing Web Page Contains Navigator Bar and 4 descriptive sections.
 
 ## Project contribution
 
-Udacity 
-EgFwd
+#### Udacity 
+#### EgFwd
 
 ## License & Copyright
 
-© Udacity - Modified By Mohsen Gamal.
+# © Udacity - Modified By Mohsen Gamal.
