@@ -33,6 +33,8 @@ h1 {
     }
 }
 
+
+
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
@@ -86,6 +88,13 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+
+.activeNav {
+    background: #2b485a;
+    color: #fdf7f7 !important;
+    /* transition: ease 0.3s all; */
 }
 
 /* Header Styles */
@@ -221,3 +230,7 @@ section.active .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+
+
+

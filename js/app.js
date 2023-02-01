@@ -39,26 +39,6 @@
 */
 
 // build the nav
-// select the first (main) heading of the page
-// add the <span> element as the last child element of the main heading
-
-
-// let counter = 0;
-// const createSection = () => {
-//   counter++;
-//   const content = `<section id="section${counter}" data-nav="Section ${counter}">
-//     active="landing__container">
-//     <h2>Section ${counter}</h2>
-//     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-    
-//     <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-//     </div>
-//     </section>`;
-//   document.querySelector("main").insertAdjacentHTML("beforeend", content);
-// };
-
-
-
 
 
 // first step >> get the location nav list by id.
@@ -88,92 +68,28 @@ sectionHeads.forEach(function(item){
 });
 
 
-
-const sections = document.querySelectorAll('section');
+// Select all the 4 sections of the page 
+const sections = document.querySelectorAll('section')
+const activeAnch = document.querySelectorAll(".menu__link")
+// Function to add active animation to each section when it appear.  
 function makeActive(){
-    for (const section of sections) {
-    const box = section.getBoundingClientRect();
-    //Find a value that works best, but 150 seems to be a good start.
-    if (box.top <= 150 && box.bottom >= 150 ) {
-        section.classList.add("active", "menu__link");
-    //apply active state on current section and corresponding Nav link
+    // Add for of loop to add active class to each section in viweport.  
+    sections.forEach((section, i)=>{
+        // Add variable to get the section in viewport.
+    const sectionView = section.getBoundingClientRect();
+    //>> Find a value that works best, but 150 seems to be a good start.
+    //apply active state on current section and corresponding Nav link.
+    if (sectionView.top <= 150 && sectionView.bottom >= 150 ) {
+        section.classList.add("active");
+        activeAnch[i].classList.add("activeNav");
+    //Remove active state from other section and corresponding Nav link.
     } else {
         section.classList.remove("active");
-    //Remove active state from other section and corresponding Nav link
-    }
-    }
-    }
-    // Call the makeActive() function whenever the user scrolls the page.
-    // Make sections active
+        activeAnch[i].classList.remove("activeNav");
+    }})}
+    // Call the makeActive() function whenever the user scrolls the page. Make sections active.
     document.addEventListener("scroll", (event)=> { makeActive();});
 
-// -----------------------------------------------
-// this code down .. from https://github.com/Mohammed-Nasif/Udacity-Landing-Page-Project
-// helped me to fix issues with my makeActive function 
-
-// const sections = document.querySelectorAll('section');
-// function makeActive (){
-
-//     sections.forEach((section)=>{
-//         const sectionView = section.getBoundingClientRect();
-//         if (sectionView.top <= 150 && sectionView.bottom >= 150){
-//             section.classList.add("active");
-//         } else{
-//             section.classList.remove("active");
-//         }
-//     })
-// }
-
-// window.addEventListener('scroll',(event)=>{
-//     makeActive();
-// })
-
-// --------------------------------------------------------
-
-
-
-// // let sections = document.querySelectorAll(`[data-nav=${active.id}]`)
-// // let section = document.querySelectorAll("section");
-
-// function makeActive(){
-//     for (const section of sections) {
-//     const box = section.getBoundingClientRect();
-//     //Find a value that works best, but 150 seems to be a good start.
-//     if (box.top <= 150 && box.bottom >= 150;) {
-//         section.target.classList.add("active")
-//     //apply active state on current section and corresponding Nav link
-//     } else {
-//         section.target.classList.remove("active")
-//     //Remove active state from other section and corresponding Nav link
-//     }
-//     }
-//     }
-//     // Call the makeActive() function whenever the user scrolls the page.
-//     // Make sections active
-//     document.addEventListener("scroll", function() { makeActive();});
-
-
-
-// const dood = ["Section 1", "Section 2", "Section 3", "Section 4"];
-
-// for (const element of dood) {
-//     console.log(element);
-// }
-
-
-// const array1 = ['a', 'b', 'c'];
-
-// for (const element of array1) {
-//   console.log(element);
-// }
-
-
-// active 'active' to section when near top of viewport
-
-
-
-
-// Scroll to anchor ID using scrollTO event
 
 
 /**
