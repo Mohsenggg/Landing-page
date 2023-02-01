@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Project Summary "Udacity"](#Project-Summary)
+* [Project Summary](#Project-Summary)
 * [Project Files](#Project-Files)
 * [Project Content](#Project-Content)
 * [Project contribution](#Project-Contribution)
@@ -18,7 +18,7 @@ To get started, open `js/app.js` and start building out the app's functionality
 
 For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
 
-## Project Summary "Udacity"
+## Project Summary
 
 This project aims to give you real-world scenarios of manipulating the DOM. The functionality you will be using serves two purposes: to prepare you for appending dynamically added data to the DOM, and to show you how javascript can improve the usability of an otherwise static site. 
 
