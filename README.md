@@ -41,4 +41,4 @@ Landing Web Page Contains Navigator Bar and 4 descriptive sections.
 
 ## License & Copyright
 
-# © Udacity - Modified By Mohsen Gamal.
+### © Udacity - Modified By Mohsen Gamal.
