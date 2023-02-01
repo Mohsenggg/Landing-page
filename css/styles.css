@@ -33,8 +33,6 @@ h1 {
     }
 }
 
-
-
 h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
@@ -229,6 +227,38 @@ section.active .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+
+/* ---------media quieries------------ */
+@media screen and (max-width: 413px) {
+    .navbar__menu .menu__link{
+        font-size: 13px;
+        padding: 12px;
+    }
+    p {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 357px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+    .navbar__menu .menu__link{
+        font-size: 10px;
+        padding: 10px;
+    }
+    p {
+        font-size: 11px;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
 }
 
 
