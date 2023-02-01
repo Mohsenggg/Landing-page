@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [Project Summary](#Project-Summary)
+* [Project Summary "Udacity"](#Project-Summary)
 * [Project Files](#Project-Files)
 * [Project Content](#Project-Content)
 * [Project contribution](#Project-Contribution)
